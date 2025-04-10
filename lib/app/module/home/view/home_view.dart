@@ -21,7 +21,7 @@ class HomeView extends GetView<HomeViewController> {
   Widget build(BuildContext context) {
     return GetBuilder<HomeViewController>(
       init: HomeViewController(),
-      builder: (_) {
+      builder: (homeController) {
         return Scaffold(
           bottomNavigationBar: _buildBottonNavigationBar(),
           appBar: _buildAppBar(title: "Lussail, Qatar"),
@@ -37,7 +37,9 @@ class HomeView extends GetView<HomeViewController> {
                       SizedBox(height: 20.h),
                       const ActionButtons(),
                       SizedBox(height: 20.h),
-                      const UpcommingCompetitonView(),
+                      UpcommingCompetitonView(
+                        carouselController: homeController.controller,
+                      ),
                       SizedBox(height: 20.h),
                       ExpertCoachesView(),
                       SizedBox(height: 20.h),
