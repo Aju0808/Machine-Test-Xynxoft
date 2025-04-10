@@ -56,7 +56,7 @@ class ExpertCoachesView extends StatelessWidget {
                     ),
                     const Divider(color: Colors.grey, thickness: 0.5),
                     SizedBox(height: 10.h),
-                    _buildTypeContainer(type: "Coach"),
+                    _buildTypeContainer(type: "Adults and Kids"),
                   ],
                 );
               },
